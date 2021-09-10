@@ -1,0 +1,10 @@
+#RewriteEngine on
+#RewriteBase /ass
+#RewriteCond $1 !^(index\.php|user_guide|image|images|img|js|css|assets|test|robots\.txt|favicon\.ico)
+#RewriteRule ^(.*)$ index.php/$1 [L]
+
+# http://domain/adminページのみベーシック認証を掛ける
+AuthType Basic
+AuthName "admin"
+/var/www/html/stripe-php-sample-master/src/.htpasswd
+require valid-user
